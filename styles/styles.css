@@ -1,0 +1,143 @@
+body {
+    background-color: grey;
+}
+
+#grilla {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-rows: 20% auto auto 20%;
+    grid-template-areas: "header nav nav nav"
+                         " galeria galeria galeria redes"
+                         "musica musica musica redes"
+                         "footer footer footer footer";
+    gap: 10rem;
+}
+.header {
+    grid-area: header;
+    border: solid;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.nav {
+    grid-area: nav;
+    border: solid;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.galeria {
+    grid-area: galeria;
+    border: solid;
+    display: flex;
+    justify-content: center;
+}
+.musica {
+    grid-area: musica;
+    border: solid;
+    display: flex;
+    justify-content: center;
+}
+.bio {
+    grid-area: redes;
+    border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer {
+    grid-area: footer;
+    border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap : 50px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 916px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 20% auto auto 20%;
+        grid-template-areas: "header nav nav"
+                             " galeria galeria redes"
+                             "musica musica redes"
+                             "footer footer footer";
+        gap: 10rem;
+    }
+}
+@media screen and (max-width: 750px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% 20% auto auto 20% 20%;
+        grid-template-areas: "header"
+                             "nav"
+                             "galeria"
+                             "musica"
+                             "redes"
+                             "footer";
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 556px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% 40% auto auto 10% 10%;
+        grid-template-areas: "header"
+                             "nav"
+                             "galeria"
+                             "musica"
+                             "redes"
+                             "footer";
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 328px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% 60% auto auto 10% 10%;
+        grid-template-areas: "header"
+                             "nav"
+                             "galeria"
+                             "musica"
+                             "redes"
+                             "footer";
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 294px) {
+    #grilla {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 20% 60% auto auto 10% 10%;
+        grid-template-areas: "header"
+                             "nav"
+                             "galeria"
+                             "musica"
+                             "redes"
+                             "footer";
+        gap: 10px;
+    }
+    .nav {
+        grid-area: nav;
+        border: solid;
+        display: flex;
+        justify-content: space-around;
+        justify-items: center;
+        gap: 50px;
+    }
+}
