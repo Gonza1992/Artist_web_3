@@ -103,7 +103,8 @@ ul li:active {
     flex-wrap: wrap;
     align-content: center ;
     line-height: 40px;
-
+    color: rgb(3, 80, 111);
+    font-weight: bold;
 }
 
 #bio div {
